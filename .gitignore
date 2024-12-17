@@ -1,9 +1,10 @@
+<<<<<<< HEAD
 # File created using '.gitignore Generator' for Visual Studio Code: https://bit.ly/vscode-gig
 # Created by https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,c,c++,executable
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,visualstudiocode,c,c++,executable
 
 ### C ###
-# Prerequisites
+# Prerequisitest
 *.d
 
 # Object files
@@ -133,4 +134,7 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,c,c++,executable
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
+=======
+*.exe
+>>>>>>> a86638b (add gitignore)
 
