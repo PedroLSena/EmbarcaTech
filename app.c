@@ -25,13 +25,13 @@ int opcaoMenu(int opcao) // escolha da função
     {
     case 1:
         break;
-    
+
     case 2:
         break;
-    
+
     case 3:
         break;
-    
+
     case 4:
         break;
 
@@ -40,16 +40,16 @@ int opcaoMenu(int opcao) // escolha da função
 
     case 6:
         break;
-    
+
     case 7:
         break;
 
     case 8:
         break;
-    
+
     case 9:
         break;
-    
+
     case 0:
 
         system("clear || cls");// Exclui tudo acima
@@ -57,7 +57,7 @@ int opcaoMenu(int opcao) // escolha da função
         printf("\nFim do Programa\n");
         printf("\n******************\n");
         break;
-    
+
     default:
         printf("\nInvalido\n");
         break;
@@ -65,7 +65,7 @@ int opcaoMenu(int opcao) // escolha da função
 }
 
 void validarNumero()
-{1
+{
 
     int opcao = 0; //escolher menu
     int maior = 0;
@@ -78,7 +78,7 @@ void validarNumero()
             system("clear || cls");// Exclui tudo acima
             menu();
             printf("Erro!! \nDigite um número\n--> ");
-            while(getchar() != '\n');//buffet do teclado 
+            while(getchar() != '\n');//buffet do teclado
         }
 
         if(opcao < 0 || opcao > 9)
