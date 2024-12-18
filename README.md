@@ -14,7 +14,7 @@
 <!-- ![Status do projeto](https://img.shields.io/badge/status-pausado-yellow) -->
 <!-- ![Status do projeto](https://img.shields.io/badge/status-finalizado-red) -->
 
-A criação de um sistema de gerenciamento de processos de advogados.
+Descrição temporária.
 
 ## ☕ Usando <EmbarcaTech>
 
