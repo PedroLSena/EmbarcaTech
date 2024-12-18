@@ -67,6 +67,7 @@ int opcaoMenu(int opcao) // escolha da função
 void validarNumero()
 {
     int opcao = 0; //escolher menu
+    int maior = 0;
 
     printf("\n--> ");
     do
@@ -78,7 +79,17 @@ void validarNumero()
             printf("Erro!! \nDigite um número\n--> ");
             while(getchar() != '\n');//buffet do teclado 
         }
-    } while (opcao < 0 && opcao > 9);
+
+        if(opcao < 0 || opcao > 9)
+        {
+            system("clear || cls");// Exclui tudo acimas
+            menu();// printar menu
+            printf("Não existe na lista\nDigite Outro Número\n");
+        }
+        else
+            maior = 1;
+
+    } while (maior != 1);
 
     opcaoMenu(opcao);// Escolha dafunção do menu
 
