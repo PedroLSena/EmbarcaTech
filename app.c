@@ -65,7 +65,8 @@ int opcaoMenu(int opcao) // escolha da função
 }
 
 void validarNumero()
-{
+{1
+
     int opcao = 0; //escolher menu
     int maior = 0;
 
