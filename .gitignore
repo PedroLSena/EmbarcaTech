@@ -2,8 +2,12 @@
 # Created by https://www.toptal.com/developers/gitignore/api/c,executable,visualstudio
 # Edit at https://www.toptal.com/developers/gitignore?templates=c,executable,visualstudio
 
+app
+**.exe
+
 **/output
 **/.vscode
+.vscode/
 
 ### C ###
 # Prerequisites
