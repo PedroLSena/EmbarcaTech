@@ -18,12 +18,32 @@ void menu()
     printf("\n*************************************************************************************\n");
 }
 
+void converterComprimento() {
+    double valor;
+    int opcao;
+    printf("\nUnidades de Comprimento:\n");
+    printf("1. Metro para Centímetro\n2. Metro para Milímetro\n3. Centímetro para Metro\n4. Milímetro para Metro\n");
+    printf("Escolha uma opção: ");
+    scanf("%d", &opcao);
+    printf("Digite o valor: ");
+    scanf("%lf", &valor);
+
+    switch (opcao) {
+        case 1: printf("%.2lf metros = %.2lf centímetros\n", valor, valor * 100); break;
+        case 2: printf("%.2lf metros = %.2lf milímetros\n", valor, valor * 1000); break;
+        case 3: printf("%.2lf centímetros = %.2lf metros\n", valor, valor / 100); break;
+        case 4: printf("%.2lf milímetros = %.2lf metros\n", valor, valor / 1000); break;
+        default: printf("Opção inválida!\n");
+    }
+}
+
 
 int opcaoMenu(int opcao) // escolha da função
 {
     switch (opcao)
     {
     case 1:
+        converterComprimento();
         break;
 
     case 2:
