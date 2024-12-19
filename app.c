@@ -1,12 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Protótipos das funções na branch
+void converterComprimento();
+void converterArea();
+
+// Função para exibir o menu
 void menu()
 {
     printf("\n       Digite um Número Para Escolher a Opção\n");
     printf("\n************************************************************************************\n");
     printf("| 1. Unidades de comprimento (metro, centímetro, milímetro)\n");
-    printf("| 2. Unidades de massa (quilograma, grama, tonelada\n");
+    printf("| 2. Unidades de massa (quilograma, grama, tonelada)\n");
     printf("| 3. Unidades de volume (litro, mililitro, metros cúbicos)\n");
     printf("| 4. Unidades de temperatura (Celsius, Fahrenheit, Kelvin)\n");
     printf("| 5. Unidades de velocidade (km/h, m/s, mph)\n");
@@ -18,106 +23,95 @@ void menu()
     printf("\n*************************************************************************************\n");
 }
 
-void converterComprimento() {
-    double valor;
-    int opcao;
-    printf("\nUnidades de Comprimento:\n");
-    printf("1. Metro para Centímetro\n2. Metro para Milímetro\n3. Centímetro para Metro\n4. Milímetro para Metro\n");
-    printf("Escolha uma opção: ");
-    scanf("%d", &opcao);
-    printf("Digite o valor: ");
-    scanf("%lf", &valor);
-
-    switch (opcao) {
-        case 1: printf("%.2lf metros = %.2lf centímetros\n", valor, valor * 100); break;
-        case 2: printf("%.2lf metros = %.2lf milímetros\n", valor, valor * 1000); break;
-        case 3: printf("%.2lf centímetros = %.2lf metros\n", valor, valor / 100); break;
-        case 4: printf("%.2lf milímetros = %.2lf metros\n", valor, valor / 1000); break;
-        default: printf("Opção inválida!\n");
-    }
-}
-
-
-int opcaoMenu(int opcao) // escolha da função
+// Função para tratar a opção escolhida
+int opcaoMenu(int opcao)
 {
     switch (opcao)
     {
     case 1:
-        converterComprimento();
+        converterComprimento(); // Chamando função da branch
         break;
 
     case 2:
+        printf("Conversor de massa ainda não implementado.\n");
         break;
 
     case 3:
+        printf("Conversor de volume ainda não implementado.\n");
         break;
 
     case 4:
+        printf("Conversor de temperatura ainda não implementado.\n");
         break;
 
-     case 5:
+    case 5:
+        printf("Conversor de velocidade ainda não implementado.\n");
         break;
 
     case 6:
+        printf("Conversor de potência ainda não implementado.\n");
         break;
 
     case 7:
+        converterArea(); // Chamando função da branch
         break;
 
     case 8:
+        printf("Conversor de tempo ainda não implementado.\n");
         break;
 
     case 9:
+        printf("Conversor de dados ainda não implementado.\n");
         break;
 
     case 0:
-
-        system("clear || cls");// Exclui tudo acima
+        system("clear || cls"); // Limpa o terminal
         printf("\n******************\n");
         printf("\nFim do Programa\n");
         printf("\n******************\n");
         break;
 
     default:
-        printf("\nInvalido\n");
+        printf("\nOpção inválida\n");
         break;
     }
 }
 
+// Função para validar a entrada do usuário
 void validarNumero()
 {
-
-    int opcao = 0; //escolher menu
-    int maior = 0;
+    int opcao = 0; // Escolher menu
+    int valido = 0;
 
     printf("\n--> ");
     do
     {
-        while (scanf("%d", &opcao) != 1)    // verificar se é um número inteiro;
+        while (scanf("%d", &opcao) != 1) // Verificar se é um número inteiro
         {
-            system("clear || cls");// Exclui tudo acima
+            system("clear || cls"); // Limpa o terminal
             menu();
             printf("Erro!! \nDigite um número\n--> ");
-            while(getchar() != '\n');//buffet do teclado
+            while (getchar() != '\n'); // Limpar buffer do teclado
         }
 
-        if(opcao < 0 || opcao > 9)
+        if (opcao < 0 || opcao > 9)
         {
-            system("clear || cls");// Exclui tudo acimas
-            menu();// printar menu
-            printf("Não existe na lista\nDigite Outro Número\n");
+            system("clear || cls"); // Limpa o terminal
+            menu();                 // Mostra o menu novamente
+            printf("Opção inválida. Digite outro número.\n");
         }
         else
-            maior = 1;
+            valido = 1;
 
-    } while (maior != 1);
+    } while (valido != 1);
 
-    opcaoMenu(opcao);// Escolha dafunção do menu
-
+    opcaoMenu(opcao); // Escolha da função do menu
 }
+
+// Função principal
 int main(int argc, char const *argv[])
 {
-    menu();// printar menu
-    validarNumero();// verificar se é um número
+    menu();          // Mostrar menu
+    validarNumero(); // Validar entrada do usuário
     return 0;
 }
