@@ -11,6 +11,7 @@
 <!-- Deixe apenas um -->
 
 ![Status do projeto](https://img.shields.io/badge/status-fazendo-green)
+
 <!-- ![Status do projeto](https://img.shields.io/badge/status-pausado-yellow) -->
 <!-- ![Status do projeto](https://img.shields.io/badge/status-finalizado-red) -->
 
@@ -35,6 +36,13 @@ Membros da equipe de desenvolvimento do projeto:
         <img src="https://github.com/matheusssilva991.png" width="100px;" alt="Foto do Matheus S.Silva no GitHub"/><br>
         <b>Matheus Santos Silva</b>
         <p>Desenvolvedor Back - NestJs</p>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/davi-aguiar">
+        <img src="https://github.com/davi-aguiar.png" width="100px;" alt="Foto do Davi no GitHub"/><br>
+        <b>Davi Aguiar</b>
+        <p>ML/AI Developer</p>
       </a>
     </td>
   </tr>
